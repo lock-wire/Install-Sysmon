@@ -28,13 +28,29 @@ If(!(test-path $path))
 
 Set-Location $path
 
+Write-Host "Location set $path"
+
+Write-Host "Retrieving SysInternals Suite for Nano Server..."
+
 Invoke-WebRequest -Uri https://download.sysinternals.com/files/SysinternalsSuite-Nano.zip -Outfile SysinternalsSuite-Nano.zip
+
+Write-Host "SysInternals Retrived"
+
+Write-Host "Unzip SysInternals..."
 
 Expand-Archive SysinternalsSuite-Nano.zip
 
 Set-Location $path\SysinternalsSuite-Nano
 
+Write-Host "Unzip Complete."
+
+Write-Host "Retrieving Configuration File..."
+
 Invoke-WebRequest -Uri https://raw.githubusercontent.com/aluminoobie/sysmon-config/master/sysmonconfig-export.xml -Outfile sysmonconfig-export.xml
+
+Write-Host "Configuration File Retrieved."
+
+Write-Host "Installing Sysmon..."
 
 .\sysmon64.exe -accepteula -i sysmonconfig-export.xml
 
