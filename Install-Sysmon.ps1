@@ -30,17 +30,17 @@ Set-Location $path
 
 Write-Host "Location set $path"
 
-Write-Host "Retrieving SysInternals Suite for Nano Server..."
+Write-Host "Retrieving Sysmon..."
 
-Invoke-WebRequest -Uri https://download.sysinternals.com/files/SysinternalsSuite-Nano.zip -Outfile SysinternalsSuite-Nano.zip
+Invoke-WebRequest -Uri https://download.sysinternals.com/files/Sysmon.zip -Outfile Sysmon.zip
 
-Write-Host "SysInternals Retrived"
+Write-Host "Sysmon Retrived"
 
-Write-Host "Unzip SysInternals..."
+Write-Host "Unzip Sysmon..."
 
-Expand-Archive SysinternalsSuite-Nano.zip
+Expand-Archive Sysmon.zip
 
-Set-Location $path\SysinternalsSuite-Nano
+Set-Location $path\Sysmon
 
 Write-Host "Unzip Complete."
 
