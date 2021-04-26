@@ -1,6 +1,6 @@
 <#
 .SYNOPSIS
-Install-Sysmon downloads SysInternals Suite and installs Sysmon
+Install-Sysmon downloads the Sysmon executables archive and installs Sysmon64.exe
 with a configuration file.
 .DESCRIPTION
 PowerShell script or module to install Sysmon with configuration 
