@@ -17,3 +17,7 @@ The path to the working directory.  Default is user Documents.
 .EXAMPLE
 
 Install-Sysmon -path C:\Users\example\Desktop
+
+### Note
+
+This is a test
